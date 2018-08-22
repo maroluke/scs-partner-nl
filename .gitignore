@@ -7,7 +7,7 @@
 # Created by https://www.gitignore.io/api/sass
 
 ### Sass ###
-.scss/
+scss/
 .sass-cache/
 *.css.map
 *.sass.map
