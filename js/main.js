@@ -13,15 +13,15 @@ $("#form").validate({
 	},
 
 	messages: {
-	  first_name: "Bitte geben Sie Ihren Vornamen an.",
-	  last_name: "Bitte geben Sie Ihren Nachnamen an.",
+	  first_name: "Bitte geben Sie Ihren Vornamen ein.",
+	  last_name: "Bitte geben Sie Ihren Nachnamen ein.",
 	  sys_email: {
-	    required: "Bitte geben Sie Ihre E-Mail Adresse an.",
+	    required: "Bitte geben Sie Ihre E-Mail Adresse ein.",
 	    email: "Ihre E-Mail sollte folgendes Format haben: name@domain.com"
 	  }
 	},
 
-	debug: true,
+	//debug: true,
     errorClass: 'error',
     validClass: 'success',
     errorElement: 'span',
@@ -58,11 +58,11 @@ $("#form").validate({
 });
 
 function submitSuccessful() {
-	$('#form').fadeOut('fast', function() {
-		$('#onSuccess').fadeIn();
-	});
-
 	$('h1').fadeOut('fast', function() {
 		$(this).html('Vielen Dank für Ihre Anmeldung zum Newsletter!').fadeIn();
+
+		$('#form').fadeOut('fast', function() {
+			$('#onSuccess').fadeIn();
+		});
 	});
 }
