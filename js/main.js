@@ -57,11 +57,11 @@ $("#form").validate({
 });
 
 function submitSuccessful() {
+	$('#form').fadeOut('fast',
+
 	$('h1').fadeOut('fast', function() {
 		$(this).html('Vielen Dank für Ihre Anmeldung zum Newsletter!').fadeIn();
 
-		$('#form').fadeOut('fast', function() {
-			$('#onSuccess').fadeIn();
-		});
+		$('#onSuccess').fadeIn();
 	});
 }
