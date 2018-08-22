@@ -49,7 +49,6 @@ $("#form").validate({
 				submitSuccessful();
 			}            
         });
-        $form.submit();
     },
 
     errorPlacement: function(error, element){
