@@ -1,6 +1,6 @@
 <?php
 // define variable name to catch from GET
-$get_param = 'ds';
+$get_param = 'newsletterID';
 
 // define valid parameters
 $ds_valids['inconet'] = array('inconet','Newsletter_Inconet','inconet-logo.svg','Inconet Technology GmbH');
