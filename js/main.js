@@ -41,21 +41,10 @@ $("#form").validate({
     },
 
     submitHandler: function(form) {
-	  //   $.ajax({
-			// url: 'https://www.xcampaign.de/dispatcher/service',
-			// type: "POST",
-			// data: $(form).serialize(),
-			// success: function(response) {
-			// 	submitSuccessful();
-			// }            
-   //      });
-
-
-
-        $.ajax({
+	  	$.ajax({
             url: "https://www.xcampaign.de/dispatcher/service", 
             type: "POST",             
-            data: new FormData($(form)),
+            data: $(form).serialize(),
             cache: false,             
             processData: false,      
             success: function(data) {
@@ -71,7 +60,7 @@ $("#form").validate({
 });
 
 function submitSuccessful() {
-	$('#form').fadeOut('fast',
+	$('#form').fadeOut('fast');
 
 	$('h1').fadeOut('fast', function() {
 		$(this).html('Vielen Dank für Ihre Anmeldung zum Newsletter!').fadeIn();
