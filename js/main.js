@@ -21,7 +21,7 @@ $("#form").validate({
 	  }
 	},
 
-	//debug: true,
+	debug: true,
     errorClass: 'error',
     validClass: 'success',
     errorElement: 'span',
@@ -41,14 +41,28 @@ $("#form").validate({
     },
 
     submitHandler: function(form) {
-	    $.ajax({
-			url: 'https://www.xcampaign.de/dispatcher/service',
-			type: "POST",
-			data: $(form).serialize(),
-			success: function(response) {
-				submitSuccessful();
-			}            
+	  //   $.ajax({
+			// url: 'https://www.xcampaign.de/dispatcher/service',
+			// type: "POST",
+			// data: $(form).serialize(),
+			// success: function(response) {
+			// 	submitSuccessful();
+			// }            
+   //      });
+
+
+
+        $.ajax({
+            url: "https://www.xcampaign.de/dispatcher/service", 
+            type: "POST",             
+            data: new FormData($(form)),
+            cache: false,             
+            processData: false,      
+            success: function(data) {
+                submitSuccessful();
+            }
         });
+        return false;
     },
 
     errorPlacement: function(error, element){
