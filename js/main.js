@@ -63,8 +63,8 @@ function submitSuccessful() {
 	$('#form').fadeOut('fast');
 
 	$('h1').fadeOut('fast', function() {
-		$(this).html('Vielen Dank für Ihre Anmeldung zum Newsletter!').fadeIn();
-
-		$('#onSuccess').fadeIn();
+		$(this).html('Vielen Dank für Ihre Anmeldung zum Newsletter!').fadeIn('fast', function() {
+			$('#onSuccess').fadeIn();
+		});
 	});
 }
