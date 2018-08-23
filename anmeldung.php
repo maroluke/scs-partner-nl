@@ -107,7 +107,7 @@ $ds_valids['swisspro'] = array('swisspro','Newsletter_Swisspro','swisspro-logo.s
 			</div>
 
 			<div class="text-field">
-				<label for="sys_email">E-mail</label>
+				<label for="sys_email">E-Mail</label>
 				<input type="email" id="sys_email" name="sys_email" />
 			</div>
 			
