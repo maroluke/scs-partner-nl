@@ -1,26 +1,3 @@
-<?php
-// define variable name to catch from GET
-$get_param = 'newsletterID';
-
-// define valid parameters
-$ds_valids['inconet'] = array('inconet','Newsletter_Inconet','inconet-logo.svg','Inconet Technology GmbH');
-$ds_valids['netfon'] = array('netfon','Newsletter_Netfon','netfon-logo.svg','Netfon Solutions AG');
-$ds_valids['swisspro'] = array('swisspro','Newsletter_Swisspro','swisspro-logo.svg','swisspro AG');
-	
-if(!$_GET[$get_param] || !array_key_exists($_GET[$get_param],$ds_valids))
-{
-	// do something if $get_param is not provided or not in $ds_valids
-	die("parameter not provided or incorrect!");
-}
-else
-{
-	// $get_param is provided and is in $ds_valids
-	// pick relevant $ds_valids for further processing
-	$partner = $ds_valids[$_GET[$get_param]];
-	// go for it!
-
-?>
-
 <!doctype html>
 <html class="no-js" lang="">
 	<head>
@@ -38,9 +15,6 @@ else
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->
 
-		<!-- Partner Logo -->
-		<div class="partner-logo"><img src="img/<?php echo $partner[2]; ?>" alt="<?php echo $partner[3]; ?>"></div>
-
 		<!-- Title -->
 		<h1>Abmeldung vom Newsletter</h1>
 
@@ -48,7 +22,6 @@ else
 			Sie wurden erfolgreich von unserer Liste entfernt.
 			<br /><br />
 			Freundliche Grüsse<br />
-			<?php echo $partner[3];?>
 		</p>
 
 		<!-- Scripts -->
@@ -57,5 +30,3 @@ else
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 	</body>
 </html>
-
-<?php } ?>
