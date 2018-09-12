@@ -114,6 +114,8 @@ $ds_valids['swisspro'] = array('swisspro','Newsletter_Swisspro','swisspro-logo.s
 			<input type="submit" id="submit" value="Anmelden" />
 		</form>
 
+		<p>Ja, ich möchte den Newsletter von <?php echo $partner[3]; ?> erhalten. Ihre Daten werden streng vertraulich behandelt und nicht an Dritte verkauft und auch nicht weiter gegeben. Diese Einwilligung kann jederzeit widerrufen werden.</p>
+
 		<!-- If submit was successful, hide form and show text -->
 		<p id="onSuccess">
 			Wir haben Ihnen eben eine E-Mail gesendet. Bitte öffnen Sie den darin enthaltenen Link, um Ihre Anmeldung zu bestätigen.
