@@ -110,11 +110,11 @@ $ds_valids['swisspro'] = array('swisspro','Newsletter_Swisspro','swisspro-logo.s
 				<label for="sys_email">E-Mail</label>
 				<input type="email" id="sys_email" name="sys_email" />
 			</div>
+
+			<p>Ja, ich möchte den Newsletter von <?php echo $partner[3]; ?> erhalten. Ihre Daten werden streng vertraulich behandelt und nicht an Dritte verkauft und auch nicht weiter gegeben. Diese Einwilligung kann jederzeit widerrufen werden.</p>
 			
 			<input type="submit" id="submit" value="Anmelden" />
 		</form>
-
-		<p>Ja, ich möchte den Newsletter von <?php echo $partner[3]; ?> erhalten. Ihre Daten werden streng vertraulich behandelt und nicht an Dritte verkauft und auch nicht weiter gegeben. Diese Einwilligung kann jederzeit widerrufen werden.</p>
 
 		<!-- If submit was successful, hide form and show text -->
 		<p id="onSuccess">
