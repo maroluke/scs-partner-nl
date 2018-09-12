@@ -292,7 +292,8 @@ body.lp {
       margin-bottom: 0; }
 
 .legal {
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 30px; }
 
 /* ==========================================================================
    Helper classes
